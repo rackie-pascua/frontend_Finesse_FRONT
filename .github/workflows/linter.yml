@@ -19,7 +19,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: 20.14.0
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Run linter
-        run: npm install && npm run linter
+        run: npm run linter
+
