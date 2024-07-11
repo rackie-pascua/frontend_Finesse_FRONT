@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import session from "express-session";
 
 import { getCreateDeliveryEmployeeForm, postDeliveryEmployeeForm } from "./controllers/HRController";
+import { getLoginForm, getRegisterForm, postLoginForm, postRegisterForm } from "./controllers/AuthController";
 
 const app = express();
 
@@ -34,3 +35,7 @@ app.listen(3000, () => {
 app.get('/deliveryEmployeeForm', getCreateDeliveryEmployeeForm);
 
 app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
+app.get('/loginForm', getLoginForm);
+app.post('/loginForm', postLoginForm);
+app.get('/registerForm', getRegisterForm);
+app.post('/registerForm', postRegisterForm);
