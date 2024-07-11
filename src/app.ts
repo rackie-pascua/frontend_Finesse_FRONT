@@ -2,8 +2,8 @@ import express from "express";
 import nunjucks from "nunjucks";
 import bodyParser from "body-parser";
 import session from "express-session";
-
 import { getCreateDeliveryEmployeeForm, postDeliveryEmployeeForm } from "./controllers/HRController";
+import { postProjectForm , getProjectForm } from "./controllers/ProjectController";
 
 const app = express();
 
@@ -32,5 +32,6 @@ app.listen(3000, () => {
 
 
 app.get('/deliveryEmployeeForm', getCreateDeliveryEmployeeForm);
-
 app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
+app.post('/projectForm', postProjectForm);
+app.get('/projectForm', getProjectForm);
