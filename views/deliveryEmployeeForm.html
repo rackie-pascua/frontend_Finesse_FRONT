@@ -24,11 +24,15 @@
             </label></h3>
             <input id="empLname" name="empLname" value="{{empLname}}" type="text">
             <br>
+
+            <h3><label for="roleId">
+                RoleId:
+            </label></h3>
             <select name="roleId" id="roleId">
                 <option value="1">Tech Lead</option>
                 <option value="1">Delivery Employee</option>
             </select>
-            <!-- <input id="name" name="description" value="{{description}}" type="text"> -->
+            
 
             <h3><label for="bankAcctNo">
                 Bank Account Number:
@@ -49,6 +53,8 @@
             
             <button id="submit">Submit</button>
         </form>
-        <script src="" async defer></script>
+        {% if errormessage %}
+            <h3 style="color:red;">{{ errormessage }}</h3>
+        {% endif %}
     </body>
 </html>
