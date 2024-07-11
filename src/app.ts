@@ -2,6 +2,7 @@ import express from "express";
 import nunjucks from "nunjucks";
 import bodyParser from "body-parser";
 import session from "express-session";
+import { getCreateDeliveryEmployeeForm, postDeliveryEmployeeForm } from "./controllers/HRController";
 import { postProjectForm , getProjectForm } from "./controllers/ProjectController";
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+
 app.use(session({ secret: 'SUPER_SECRET', cookie: { maxAge: 28800000 }}));
 
 declare module "express-session" {
@@ -28,5 +30,8 @@ app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
 
+
+app.get('/deliveryEmployeeForm', getCreateDeliveryEmployeeForm);
+app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
 app.post('/projectForm', postProjectForm);
 app.get('/projectForm', getProjectForm);

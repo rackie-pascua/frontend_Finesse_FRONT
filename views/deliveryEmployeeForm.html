@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create Delivery Employee</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>HR</h1>
+        <hr>
+        <h1>Create Delivery Employee</h1>
+
+        <form class="form" action="/deliveryEmployeeForm" method="post">
+            <h3><label for="empFname">
+                First Name:
+            </label></h3>
+            <input id="empFname" name="empFname" value="{{empFname}}" type="text">
+
+            <h3><label for="employeeLname">
+                Last Name:
+            </label></h3>
+            <input id="empLname" name="empLname" value="{{empLname}}" type="text">
+            <br>
+
+            <h3><label for="roleId">
+                RoleId:
+            </label></h3>
+            <select name="roleId" id="roleId">
+                <option value="1">Tech Lead</option>
+                <option value="1">Delivery Employee</option>
+            </select>
+            
+
+            <h3><label for="bankAcctNo">
+                Bank Account Number:
+            </label></h3>
+            <input id="bankAcctNo" name="bankAcctNo" value="{{bankAcctNo}}" type="number">
+
+            <h3><label for="nationalInsuranceNo">
+                National Insurance Number:
+            </label></h3>
+            <input id="nationalInsuranceNo" name="nationalInsuranceNo" value="{{nationalInsuranceNo}}" type="text">
+
+            <h3><label for="salary">
+                Salary:
+            </label></h3>
+            <input id="salary" name="salary" value="{{salary}}" type="number">
+
+            </br></br>
+            
+            <button id="submit">Submit</button>
+        </form>
+        {% if errormessage %}
+            <h3 style="color:red;">{{ errormessage }}</h3>
+        {% endif %}
+    </body>
+</html>
