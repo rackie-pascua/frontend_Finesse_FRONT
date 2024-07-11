@@ -1,6 +1,6 @@
 export type ProjectResponse = {
-    project_id: Number,
-    name: String,
-    value: Number,
+    project_id: number,
+    name: string,
+    value: number,
     client: number
 }

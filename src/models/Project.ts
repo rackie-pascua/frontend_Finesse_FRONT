@@ -1,6 +1,6 @@
 export type Project = {
-    project_id: Number;
-    name: String,
-    value: Number,
-    client: Number
+    project_id: number;
+    name: string,
+    value: number,
+    client: number
 }
