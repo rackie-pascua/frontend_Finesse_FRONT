@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+
 app.use(session({ secret: 'SUPER_SECRET', cookie: { maxAge: 28800000 }}));
 
 declare module "express-session" {
