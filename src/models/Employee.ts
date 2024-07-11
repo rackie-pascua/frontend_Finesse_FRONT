@@ -6,8 +6,4 @@ export type Employee = {
     bankAcctNo: Number,
     nationalInsuranceNo: Number,
     salary: Number,
-
-
-
-
 }

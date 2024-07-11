@@ -9,8 +9,46 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        
-        
+        <h1>HR</h1>
+        <hr>
+        <h1>Create Delivery Employee</h1>
+
+        <form class="form" action="/deliveryEmployeeForm" method="post">
+            <h3><label for="employeeFname">
+                First Name:
+            </label></h3>
+            <input id="employeeFname" name="employeeFname" value="{{employeeFname}}" type="text">
+
+            <h3><label for="employeeLname">
+                Last Name:
+            </label></h3>
+            <input id="employeeLname" name="employeeLname" value="{{employeeLname}}" type="text">
+            <br>
+            <select name="roleId" id="roleId">
+                <option value="1">Tech Lead</option>
+                <option value="1">Delivery Employee</option>
+            </select>
+            <!-- <input id="name" name="description" value="{{description}}" type="text"> -->
+
+            <h3><label for="bankAcctNo">
+                Bank Account Number:
+            </label></h3>
+            <input id="bankAcctNo" name="bankAcctNo" value="{{bankAcctNo}}" type="number">
+
+            <h3><label for="nationalInsuranceNo">
+                National Insurance Number:
+            </label></h3>
+            <input id="nationalInsuranceNo" name="nationalInsuranceNo" value="{{nationalInsuranceNo}}" type="number">
+
+            <h3><label for="salary">
+                Salary:
+            </label></h3>
+            <input id="salary" name="salary" value="{{salary}}" type="number">
+
+            </br></br>
+            
+            <button id="submit">Submit</button>
+        </form>
         <script src="" async defer></script>
     </body>
 </html>
