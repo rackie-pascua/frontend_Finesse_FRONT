@@ -33,3 +33,5 @@ app.listen(3000, () => {
 app.get('/deliveryEmployeeForm', getCreateDeliveryEmployeeForm);
 
 app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
+
+app.get('/deliveryEmployee');
