@@ -1,8 +1,8 @@
 export type Employee = {
-    empFname: String,
-    empLname: String,
-    roleId: Number,
-    bankAcctNo: Number,
-    nationalInsuranceNo: String,
-    salary: Number,
+    empFname: string,
+    empLname: string,
+    roleId: number,
+    bankAcctNo: number,
+    nationalInsuranceNo: string,
+    salary: number,
 }
