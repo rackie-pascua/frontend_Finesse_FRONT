@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Create Project</title>
-    </head>
-    <body>
-        <h1>Create Project</h1>
 
-        {% if errormessage %}
-            <h3>{{ errormessage }}</h3>
-        {% endif %}
+<head>
+    <title>Create Project</title>
+</head>
 
-        <form class= form action="/projectForm" method="post"> 
-            <h3><label for="name"> 
+<body>
+    <h1>Create Project</h1>
+
+    {% if errormessage %}
+    <h3>{{ errormessage }}</h3>
+    {% endif %}
+
+    <form class=form action="/projectForm" method="post">
+        <h3><label for="name">
                 Project Name:
             </label></h3>
-            <input id="name" name="name" value="{{name}}" type="text">
+        <input id="name" name="name" value="{{name}}" type="text">
 
-            <h3><label for="value"> 
-                Project Value: 
+        <h3><label for="value">
+                Project Value:
             </label></h3>
-            <input id="value" name="value" value="{{value}}" type="value">
+        <input id="value" name="value" value="{{value}}" type="value">
 
-            <h3><label for="client"> 
-                Client ID: 
+        <h3><label for="client">
+                Client ID:
             </label></h3>
-            <input id="client" name="client" value="{{client}}" type="number">
+        <select name="client_id" id="client_id">
+            {% for client in clients %}
+            <option value="{{client.client_id}}">{{client.clientName}}</option>
+        </select>
+        {% endfor %}
+        <br></br>
+        <button id="submit">Submit</button>
+    </form>
+</body>
 
-            <br></br>
-
-            <button id="submit">Submit</button>
-
-        </form>
-    </body>
 </html>
