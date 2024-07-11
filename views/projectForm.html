@@ -23,14 +23,14 @@
             </label></h3>
         <input id="value" name="value" value="{{value}}" type="value">
 
-        <h3><label for="client">
+        <h3><label for="client_id">
                 Client ID:
             </label></h3>
         <select name="client_id" id="client_id">
             {% for client in clients %}
-            <option value="{{client.client_id}}">{{client.clientName}}</option>
+            <option value="{{client.client_id}}">{{client.client_name}}</option>
+            {% endfor %}
         </select>
-        {% endfor %}
         <br></br>
         <button id="submit">Submit</button>
     </form>
