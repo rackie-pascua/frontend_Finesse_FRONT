@@ -15,7 +15,7 @@ export const createProject = async (project: ProjectRequest): Promise<number> =>
 }
 
 
-export const getAllProjects = async (): Promise<ProjectResponse[]> => {
+export const getAllClients = async (): Promise<ProjectResponse[]> => {
     try {
         const response: AxiosResponse = await axios.get("http://localhost:8080/api/management/");
 
