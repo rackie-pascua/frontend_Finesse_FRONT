@@ -1,11 +1,12 @@
-import express from "express";
+import { Request, Response } from "express";
 import { createProject, getAllProjects } from "../services/ProjectService"
 
-export const getProjectForm = async (req: express.Request, res: express.Response): Promise<void> => {
+
+export const getProjectForm = async (req: Request, res: Response): Promise<void> => {
     res.render('projectForm.html', { clients: await getAllProjects() });
 }
 
-export const postProjectForm = async (req: express.Request, res: express.Response): Promise<void> => {
+export const postProjectForm = async (req: Request, res: Response): Promise<void> => {
     try {
         await createProject(req.body);
         res.render('project.html');
@@ -14,5 +15,4 @@ export const postProjectForm = async (req: express.Request, res: express.Respons
         res.render('projectForm.html', req.body);
     }
 }
-
 
