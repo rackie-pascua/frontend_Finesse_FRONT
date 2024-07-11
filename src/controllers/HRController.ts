@@ -8,7 +8,7 @@ export const getCreateDeliveryEmployeeForm = async (req: express.Request, res: e
 export const postDeliveryEmployeeForm = async (req: express.Request, res: express.Response) => {
     try {
         const id = await createDeliveryEmployee(req.body);
-        res.redirect('/HR/');
+        res.redirect('deliveryEmployee.html');
     } catch (e) {
         res.locals.errormessage = e.message;
         res.render('deliveryEmployeeForm.html', req.body);
